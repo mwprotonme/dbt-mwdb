@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: airbnb_dashboard
+    type: dashboard
+    maturity: low
+    url: https://96f8c0d6.us2a.app.preset.io/superset/dashboard/8/?native_filters_key=HyYnBOIL3g4
+    description: "This dashboard provides insights into Airbnb listings, including pricing, availability, and host information. It is designed to help users understand market trends and make informed decisions about their Airbnb investments."
+
+    depends_on:
+      - ref('dim_listings_with_hosts')
+      - ref('mart_full_moon_reviews')
+
+    owner:
+      name: M. Wieczorek
+      email: dbt@mail.com
